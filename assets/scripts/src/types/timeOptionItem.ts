@@ -1,4 +1,4 @@
-export type TimeOptionsItem = {
+export type TimeOptionItem = {
     name: string;
     value: number;
-  }
+}

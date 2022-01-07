@@ -4,4 +4,4 @@ export type ServiceItem = {
     description: string;
     price: number;
     priceFormated?: string;
-} 
+}

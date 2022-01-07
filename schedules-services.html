@@ -188,9 +188,11 @@
 
       <main>
         <form action="schedules-payment.html">
+          <input type="hidden" name="schedule_at"/>
+          <input type="hidden" name="option"/>
           <div class="options">
             <label>
-              <input type="checkbox" name="service" value="1" />
+              <input type="checkbox" name="service" value="1" checked />
               <div class="square">
                 <div></div>
               </div>
@@ -202,7 +204,7 @@
             </label>
 
             <label>
-              <input type="checkbox" name="service" value="2" />
+              <input type="checkbox" name="service" value="2" checked />
               <div class="square">
                 <div></div>
               </div>
@@ -230,7 +232,7 @@
 
           <footer class="fixed">
             <a href="schedules-time-options.html">Voltar</a>
-            <button type="submit">Continuar</button>
+            <button type="submit" disabled>Continuar</button>
           </footer>
         </form>
       </main>
@@ -327,15 +329,17 @@
         </footer>
       </aside>
     </section>
+
+   
     <script type="text/html" id="tpl-label">
-      <input type="checkbox" name="service" value="${item.id}" checked />
+      <input type="checkbox" name="service" value="${item.id}" />
       <div class="square">
-        <div></div>
+          <div></div>
       </div>
-      <div>
-        <span class="name">${item.name}</span>
-        <span class="description">${item.description}</span>
-        <span class="price">${formatCurrency(item.price)}</span>
+      <div class="content">
+          <span class="name">${item.name}</span>
+          <span class="description">${item.description}</span>
+          <span class="price">${item.priceFormated}</span>
       </div>
     </script>
     <script src="bundle.js"></script>
