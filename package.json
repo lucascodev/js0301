@@ -7,7 +7,8 @@
     "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
     "sass:build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed",
     "dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "clear": "rm -rf node_modules"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "date-fns": "^2.28.0",
+    "firebase": "9.6.2",
     "imask": "^6.2.2"
   }
 }
